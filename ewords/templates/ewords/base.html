@@ -1,0 +1,27 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>eWords. Study Hard</title>
+    <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.gif' %}">
+    <meta name="description" content="eWords">
+    <meta name="keywords" content="eWords">
+    <link rel="canonical" href="http://ewords.pythonanywhere.com">
+    <meta name="robots" content="NOODP">
+    <meta name="robots" content="NOYDIR">
+    <link rel="canonical" href="http://ewords.pythonanywhere.com">
+</head>
+<body>
+    <div class="main-header">
+            <div class="main-header-logo">
+                <p class="main-header-logo-title">eWords</p>
+                <p class="main-header-logo-subtitle">Study Hard</p>
+            </div>
+    </div>
+ {% block content %}
+{% endblock %}
+</body>
+</html>
