@@ -65,8 +65,15 @@ body {
 
 .quote-translation {
     padding-top: 20px;
+    display: none;
     text-align: center;
 }
+
+.quote-translation-button {
+    color: blue;
+    cursor: pointer;
+}
+
 
 .quote-sharing {
     width: 100;

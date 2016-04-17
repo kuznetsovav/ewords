@@ -13,7 +13,16 @@
     <meta name="robots" content="NOODP">
     <meta name="robots" content="NOYDIR">
     <link rel="canonical" href="http://ewords.pythonanywhere.com">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+        $('.squote-translation').hide();
+        $('.quote-translation-button').click(function(){
+        $(this).next().toggle()});
+        });
+    </script>
 </head>
+
 <body>
     <div class="main-header">
             <div class="main-header-logo">
