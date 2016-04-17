@@ -23,10 +23,53 @@ body {
     font-size: 13px;
     margin-left: 30px;
     font-weight: bold;
+    color: 	#363636;
 }
 
 .main-header {
     width: 100%;
     height: 100px;
     background: #FFEFD5;
+}
+
+.quotes-block {
+    width: 100%;
+    font-family: 'calibri';
+}
+
+.quotes-block-headline {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.quotes-block-headline,.quote {
+    width: 500px;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.quote-image img {
+    width: 100%;
+}
+
+.quote-text {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.quote-author p {
+    text-align: right;
+    padding-top: 10px;
+    font-style: italic;
+}
+
+.quote-translation {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.quote-sharing {
+    width: 100;
+    text-align: right;
+    padding-top: 20px;
 }

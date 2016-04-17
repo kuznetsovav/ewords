@@ -1,8 +1,56 @@
 {% extends 'ewords/base.html' %}
 
 {% block content %}
+{% load staticfiles %}
 <div class="main-content">
+    <div class="quotes-block">
+        <div class="quotes-block-headline">
+            <p>
+                Quote of the Day
+            </p>
+        </div>
+        <div class="quote">
+            <div class="quote-image">
+                <img src="{% static "images/1.jpg" %}" alt="Vidal"/>
+            </div>
+            <div class="quote-text">
+                <p>Half of the American people have never read a newspaper. Half never voted for President. One hopes it is the same half. </p>
+            </div>
+            <div class="quote-author">
+                <p>Gore Vidal</p>
+            </div>
+            <div class="quote-translation">
+                <p>Половина американцев никогда не читали газет. Половина не участвовали в выборах президента. Остается только надеяться, что эта одна и та же половина.</p>
+            </div>
+            <div class="quote-sharing">
+               <script type="text/javascript">(function() {
+                   if (window.pluso)if (typeof window.pluso.start == "function") return;
+                   if (window.ifpluso==undefined) { window.ifpluso = 1;
+                   var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+                   s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+                   s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+                   var h=d[g]('body')[0];
+                   h.appendChild(s);
+                   }})();
+                </script>
+                <div class="pluso" data-background="transparent" data-options="small,round,line,horizontal,counter,theme=02" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir,email,print">
+                </div>
+            </div>
+            <div class="quote-comments">
+                <!-- Put this script tag to the <head> of your page -->
+                <script type="text/javascript" src="//vk.com/js/api/openapi.js?121"></script>
+                <script type="text/javascript">
+                    VK.init({apiId: API_ID, onlyWidgets: true});
+                </script>
 
+                <!-- Put this div tag to the place, where the Comments block will be -->
+                <div id="vk_comments"></div>
+                <script type="text/javascript">
+                VK.Widgets.Comments("vk_comments", {limit: 5, width: "500", attach: "*"});
+                </script>
+            </div>
+        </div>
+    </div>
 </div>
 
 {% endblock content %}
