@@ -7,10 +7,24 @@ body {
 
 }
 
+/**HEADER**/
+/**HEADER.LOGO**/
+
+.main-header {
+    width: 100%;
+    height: 100px;
+    background: #FFEFD5;
+}
+
 .main-header-logo {
-    width: 100px;
+    width: 150px;
     padding: 15px;
     margin-left: 20px;
+    float: left;
+}
+
+.main-header-logo a {
+    text-decoration: none;
 }
 
 .main-header-logo-title {
@@ -26,12 +40,34 @@ body {
     color: 	#363636;
 }
 
-.main-header {
-    width: 100%;
-    height: 100px;
-    background: #FFEFD5;
+/**HEADER.MENU**/
+.main-header-menu {
+    width: 300px;
+    float: left;
+    position: relative;
+    margin-top: 36px;
 }
 
+.main-header-menu-list li {
+    display: inline;
+    font-size: 20px;
+    font-family: 'calibri';
+    margin-right: 10px;
+}
+
+.main-header-menu-list a {
+    color: #363636;
+    text-decoration: none;
+}
+
+.main-header-menu-list a:hover {
+    border-bottom: 1px solid #363636;
+    padding-bottom: 3px;
+}
+
+/**MAIN PAGE**/
+
+/**MAIN PAGE.QUOTES**/
 .quotes-block {
     width: 100%;
     font-family: 'calibri';
