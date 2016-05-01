@@ -91,9 +91,12 @@ body {
 .quote-text {
     padding-top: 20px;
     text-align: center;
+    font-family: 'Helvetica Neue', 'Helvetica', 'Verdana', 'Arial', sans-serif !important;
+    font-size: 20px;
+    line-height: 26px;
 }
 
-.quote-author p {
+.quote-author {
     text-align: right;
     padding-top: 10px;
     font-style: italic;
@@ -103,6 +106,12 @@ body {
     padding-top: 20px;
     display: none;
     text-align: center;
+}
+
+.quote-translation p {
+    font-family: 'Helvetica Neue', 'Helvetica', 'Verdana', 'Arial', sans-serif !important;
+    font-size: 20px;
+    line-height: 26px;
 }
 
 .quote-translation-button {
@@ -115,4 +124,53 @@ body {
     width: 100;
     text-align: right;
     padding-top: 20px;
+}
+
+/**Quotations page**/
+.quotations {
+    width: 98%;
+    margin: auto;
+    padding-top: 10px;
+}
+
+.quotations-quote{
+    width: 22%;
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid black;
+    float: left;
+    position: relative;
+    border-radius: 8px;
+}
+
+.quotations-quote-eng-text {
+    font-family: 'Helvetica Neue', 'Helvetica', 'Verdana', 'Arial', sans-serif !important;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.quotations-quote-eng-author {
+    text-align: right;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.quotations-quote-translate-block {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: none;
+}
+
+.quotations-quote-rus-text {
+    font-family: 'Helvetica Neue', 'Helvetica', 'Verdana', 'Arial', sans-serif !important;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.quotations-quote-rus-author {
+    text-align: right;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    font-style: italic;
 }
