@@ -12,7 +12,7 @@
         {% for quote in quotes %}
         <div class="quote">
             <div class="quote-image">
-                <img src="{% static  quote.image_link  %}" alt="Image"/>
+                <img src="{{quote.image_link}}" alt="Image"/>
             </div>
             <div class="quote-text">
                 <p>{{quote.eng_text}}</p>
