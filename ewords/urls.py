@@ -5,5 +5,4 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^quotations/$', views.quotations, name='quotations'),
     url(r'^video/$', views.video, name='video'),
-    url(r'^music/$', views.music, name='music'),
 ]

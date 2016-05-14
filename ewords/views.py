@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from .models import MainQuote
 from .models import Quote
+from .models import Video
 from django.utils import timezone
 import datetime
 
@@ -8,8 +8,8 @@ def index(request):
     return render(request, 'ewords/index.html', {})
 
 def index(request):
-    mainquotes = MainQuote.objects.all().filter(created_date=datetime.date.today())
-    return render(request, 'ewords/index.html', {'mainquotes': mainquotes})
+    quotes = Quote.objects.all().filter(day_quote=True)
+    return render(request, 'ewords/index.html', {'quotes': quotes})
 
 def quotations(request):
     return render(request, 'ewords/quotations.html', {})
@@ -21,5 +21,7 @@ def quotations(request):
 def video(request):
     return render(request, 'ewords/video.html', {})
 
-def music(request):
-    return render(request, 'ewords/music.html', {})
+def video(request):
+    videos = Video.objects.all()
+    return render(request, 'ewords/video.html', {'videos': videos})
+

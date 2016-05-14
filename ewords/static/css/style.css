@@ -174,3 +174,30 @@ body {
     margin-bottom: 10px;
     font-style: italic;
 }
+
+/**Video page**/
+
+.video-page {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.video-block {
+    width: 560px;
+    height: 450px;
+    float: left;
+    position: relative;
+    padding: 20px;
+}
+
+.video-block-title {
+    font-family: 'Helvetica Neue', 'Helvetica', 'Verdana', 'Arial', sans-serif !important;
+    font-size: 20px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.video-block-description {
+    font-family: 'Helvetica Neue', 'Helvetica', 'Verdana', 'Arial', sans-serif !important;
+    padding-bottom: 10px;
+}

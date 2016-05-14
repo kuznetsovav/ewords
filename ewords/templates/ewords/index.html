@@ -9,21 +9,21 @@
                 Quote of the Day
             </p>
         </div>
-        {% for mainquote in mainquotes %}
+        {% for quote in quotes %}
         <div class="quote">
             <div class="quote-image">
-                <img src="{% static  mainquote.image_link  %}" alt="Image"/>
+                <img src="{% static  quote.image_link  %}" alt="Image"/>
             </div>
             <div class="quote-text">
-                <p>{{mainquote.eng_text}}</p>
+                <p>{{quote.eng_text}}</p>
             </div>
             <div class="quote-author">
-                <p>{{mainquote.eng_author}}</p>
+                <p>{{quote.eng_author}}</p>
             </div>
             <p class="quote-translation-button">Translate into Russian</p>
                 <div class="quote-translation">
-                    <p class="quote-translation-p">{{mainquote.rus_text}}</p>
-                    <div class="quote-author">{{mainquote.rus_author}}</div>
+                    <p class="quote-translation-p">{{quote.rus_text}}</p>
+                    <div class="quote-author">{{quote.rus_author}}</div>
                 </div>
             <div class="quote-sharing">
                <script type="text/javascript">(function() {
