@@ -4,6 +4,7 @@ from datetime import datetime, timedelta, time
 
 class Quote(models.Model):
     author = models.ForeignKey('auth.User')
+    category = models.CharField(max_length=200)
     eng_text = models.TextField()
     eng_author = models.CharField(max_length=200)
     rus_text = models.TextField()

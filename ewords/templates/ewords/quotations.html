@@ -6,6 +6,9 @@
     <div class="quotations-block">
         {% for quote in quotes %}
         <div class="quotations-quote">
+            <div class="quotations-quote-category">
+                <p>{{quote.category}}</p>
+            </div>
             <div class="quotations-quote-eng-text">
                 <p>{{quote.eng_text}}</p>
             </div>
@@ -35,6 +38,7 @@
                 <div class="pluso" data-background="transparent" data-options="small,round,line,horizontal,counter,theme=02" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir,email,print">
                 </div>
                 </div>
+
             </div>
         {% endfor %}
         </div>

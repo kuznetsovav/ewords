@@ -117,13 +117,16 @@ body {
 .quote-translation-button {
     color: blue;
     cursor: pointer;
+     padding: 10px;
 }
 
 
 .quote-sharing {
     width: 100;
     text-align: right;
-    padding-top: 20px;
+    padding-top: 10px;
+    padding-right: 5px;
+    padding-bottom: 10px;
 }
 
 /**Quotations page**/
@@ -160,17 +163,28 @@ body {
 .quotations-quote{
     width: 20%;
     margin: 5px;
-    padding: 10px;
     -webkit-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.1);
     border: 1px solid #c4c4c4;
     float: left;
     position: relative;
 }
 
+.quotations-quote-category {
+    background: black;
+    color: white;
+    font-family: 'Helvetica Neue', 'Helvetica', 'Verdana', 'Arial', sans-serif !important;
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
 .quotations-quote-eng-text {
     font-family: 'Helvetica Neue', 'Helvetica', 'Verdana', 'Arial', sans-serif !important;
     font-size: 20px;
     line-height: 26px;
+     padding: 10px;
 }
 
 .quotations-quote-eng-author {
@@ -178,18 +192,21 @@ body {
     padding-top: 5px;
     margin-bottom: 10px;
     font-style: italic;
+     padding: 10px;
 }
 
 .quotations-quote-translate-block {
     margin-top: 5px;
     margin-bottom: 5px;
     display: none;
+     padding: 10px;
 }
 
 .quotations-quote-rus-text {
     font-family: 'Helvetica Neue', 'Helvetica', 'Verdana', 'Arial', sans-serif !important;
     font-size: 20px;
     line-height: 26px;
+     padding: 10px;
 }
 
 .quotations-quote-rus-author {
@@ -197,6 +214,7 @@ body {
     padding-top: 5px;
     margin-bottom: 10px;
     font-style: italic;
+     padding: 10px;
 }
 
 /**Video page**/
