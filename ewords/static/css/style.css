@@ -137,7 +137,7 @@ body {
 }
 
 .quotations-block {
-    width: 80%;
+    width: 90%;
     float: left;
     position: relative;
 }
@@ -146,18 +146,76 @@ body {
     margin-top: 5px;
     float: left;
     position: relative;
-    margin-left: 20px;
+    margin-left: -13%;
+    width: 20%;
+
 }
 
 .quotations-sorting-topics-headline {
     font-size: 20px;
     margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #AAAAAA;
 }
 
 .quotations-sorting-authors-headline {
     font-size: 20px;
     margin-bottom: 5px;
     margin-top: 10px;
+}
+
+.quotations-sorting-topics-item {
+    padding-top: 5px;
+}
+
+.quotations-sorting-topics-item li {
+    display: block;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+    border: 1px solid #c4c4c4;
+    background: #fff;
+    border-radius: 3px;
+    padding: 0 5px;
+    margin: 5px auto;
+    text-align: left;
+    padding-left: 14px;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    line-height: 40px;
+    transition: .3s;
+    overflow: hidden;
+}
+
+.quotations-sorting-authors-headline {
+    font-size: 20px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #AAAAAA;
+    padding-top: 10px;
+}
+
+.quotations-sorting-authors-items {
+    padding-top: 5px;
+}
+
+.quotations-sorting-authors-items li {
+    display: block;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+    border: 1px solid #c4c4c4;
+    background: #fff;
+    border-radius: 3px;
+    padding: 0 5px;
+    margin: 5px auto;
+    text-align: left;
+    padding-left: 14px;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    line-height: 40px;
+    transition: .3s;
+    overflow: hidden;
 }
 
 .quotations-quote{
