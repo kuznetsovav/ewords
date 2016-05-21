@@ -3,7 +3,8 @@
 {% block content %}
 {% load staticfiles %}
 <div class="quotations">
-    {% for quote in quotes %}
+    <div class="quotations-block">
+        {% for quote in quotes %}
         <div class="quotations-quote">
             <div class="quotations-quote-eng-text">
                 <p>{{quote.eng_text}}</p>
@@ -35,6 +36,33 @@
                 </div>
                 </div>
             </div>
-       {% endfor %}
+        {% endfor %}
         </div>
+            <div class="quotations-sorting">
+                <div class="quotations-sorting-topics">
+                    <div class="quotations-sorting-topics-headline">
+                        <p>Popular Topics</p>
+                    </div>
+                    <div class="quotations-sorting-topics-item">
+                        <ul>
+                            <li>Birthday</li>
+                            <li>New Year</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="quotations-sorting-authors">
+                    <div class="quotations-sorting-authors-headline">
+                        <p>Popular Authors</p>
+                    </div>
+                    <div class="quotations-sorting-authors-items">
+                        <ul>
+                            <li>Albert Einstein</li>
+                            <li>Oscar Wilde</li>
+                        </ul>
+                    </div>
+
+                    test1
+                </div>
+            </div>
+    </div>
 {% endblock content %}

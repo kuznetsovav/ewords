@@ -133,14 +133,38 @@ body {
     padding-top: 10px;
 }
 
-.quotations-quote{
-    width: 22%;
-    margin: 5px;
-    padding: 10px;
-    border: 1px solid black;
+.quotations-block {
+    width: 80%;
     float: left;
     position: relative;
-    border-radius: 8px;
+}
+
+.quotations-sorting {
+    margin-top: 5px;
+    float: left;
+    position: relative;
+    margin-left: 20px;
+}
+
+.quotations-sorting-topics-headline {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.quotations-sorting-authors-headline {
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.quotations-quote{
+    width: 20%;
+    margin: 5px;
+    padding: 10px;
+    -webkit-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.1);
+    border: 1px solid #c4c4c4;
+    float: left;
+    position: relative;
 }
 
 .quotations-quote-eng-text {
