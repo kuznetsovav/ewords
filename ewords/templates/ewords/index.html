@@ -14,31 +14,26 @@
             <div class="quote-image">
                 <img src="{{quote.image_link}}" alt="Image"/>
             </div>
-            <div class="quote-text">
-                <p>{{quote.eng_text}}</p>
-            </div>
-            <div class="quote-author">
-                <p>{{quote.eng_author}}</p>
-            </div>
-            <p class="quote-translation-button">Translate into Russian</p>
-                <div class="quote-translation">
-                    <p class="quote-translation-p">{{quote.rus_text}}</p>
-                    <div class="quote-author">{{quote.rus_author}}</div>
+            <div class="quote-text-information">
+                <div class="quote-text">
+                    <p>{{quote.eng_text}}</p>
                 </div>
-            <div class="quote-sharing">
-               <script type="text/javascript">(function() {
-                   if (window.pluso)if (typeof window.pluso.start == "function") return;
-                   if (window.ifpluso==undefined) { window.ifpluso = 1;
-                   var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
-                   s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
-                   s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
-                   var h=d[g]('body')[0];
-                   h.appendChild(s);
-                   }})();
-                </script>
-                <div class="pluso" data-background="transparent" data-options="small,round,line,horizontal,counter,theme=02" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir,email,print">
+                <div class="quote-author">
+                    <p>{{quote.eng_author}}</p>
+             </div>
+                <p class="quote-translation-button">Translate into Russian</p>
+                    <div class="quote-translation">
+                        <p class="quote-translation-p">{{quote.rus_text}}</p>
+                        <div class="quote-author">{{quote.rus_author}}</div>
+                    </div>
+                <div class="quote-sharing">
+                    {% load social_share %}
+                         {% post_to_facebook object_or_url "Facebook" %}
+                        {% post_to_twitter "New Song: {{object.title}}. Check it out!" object_or_url "Twitter" %}
+                        {% post_to_gplus object_or_url "Google+" %}
+
                 </div>
-            </div>
+                </div>
             {% endfor %}
             <div class="quote-comments">
                 <div id="hypercomments_widget"></div>

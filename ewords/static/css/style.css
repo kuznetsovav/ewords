@@ -4,8 +4,30 @@
 }
 
 body {
-
+    overflow-y: scroll;
 }
+
+.facebook-this {
+    float: left;
+    width: 10px;
+    margin-left: 10px;
+}
+
+.tweet-this {
+    float: left;
+    width: 10px;
+    margin-left: 100px;
+}
+
+.gplus-this {
+    float: left;
+    width: 10px;
+    margin-left: 85px;
+    margin-bottom: 10px;
+}
+
+
+
 
 /**HEADER**/
 /**HEADER.LOGO**/
@@ -13,7 +35,7 @@ body {
 .main-header {
     width: 100%;
     height: 100px;
-    background: #FFEFD5;
+        background: #FFEFD5;
 }
 
 .main-header-logo {
@@ -81,19 +103,33 @@ body {
 .quotes-block-headline,.quote {
     width: 500px;
     margin: auto;
-    padding-top: 50px;
+    padding-top: 25px;
+}
+
+.quote-image {
+    width: 200px;
+    float: left;
+    position: relative;
 }
 
 .quote-image img {
-    width: 100%;
+    width: 95%;
+}
+
+.quote-text-information {
+    width: 295px;
+    float: left;
+    position: relative;
+    padding-left: 5px;
 }
 
 .quote-text {
-    padding-top: 20px;
+    width:
     text-align: center;
     font-family: 'Helvetica Neue', 'Helvetica', 'Verdana', 'Arial', sans-serif !important;
     font-size: 20px;
     line-height: 26px;
+    float: left;
 }
 
 .quote-author {
@@ -103,9 +139,10 @@ body {
 }
 
 .quote-translation {
-    padding-top: 20px;
+    padding-top: 10px;
     display: none;
-    text-align: center;
+    float: left;
+    padding-bottom: 20px;
 }
 
 .quote-translation p {
@@ -117,7 +154,9 @@ body {
 .quote-translation-button {
     color: blue;
     cursor: pointer;
-     padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
 }
 
 
@@ -132,8 +171,8 @@ body {
 /**Quotations page**/
 .quotations {
     width: 98%;
-    margin: auto;
     padding-top: 10px;
+    margin: 0 auto;
 }
 
 .quotations-block {
@@ -248,29 +287,27 @@ body {
 .quotations-quote-eng-author {
     text-align: right;
     padding-top: 5px;
-    margin-bottom: 10px;
     font-style: italic;
-     padding: 10px;
+     padding-right: 10px;
 }
 
 .quotations-quote-translate-block {
     margin-top: 5px;
     margin-bottom: 5px;
     display: none;
-     padding: 10px;
+    padding-left: 10px;
 }
 
 .quotations-quote-rus-text {
     font-family: 'Helvetica Neue', 'Helvetica', 'Verdana', 'Arial', sans-serif !important;
     font-size: 20px;
     line-height: 26px;
-     padding: 10px;
+     padding-right: 10px;
 }
 
 .quotations-quote-rus-author {
     text-align: right;
     padding-top: 5px;
-    margin-bottom: 10px;
     font-style: italic;
      padding: 10px;
 }
@@ -278,7 +315,8 @@ body {
 /**Video page**/
 
 .video-page {
-    width: 100%;
+    width: 1200px;
+    background: #DBDCDE;
     margin: 0 auto;
 }
 

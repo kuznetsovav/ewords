@@ -2,22 +2,29 @@
 
 {% block content %}
 {% load staticfiles %}
- {% for video in videos %}
-<div class="video-page">
-    <div class="video-block">
-        <div class="video-block-title">
-            <p>{{video.title}}</p>
+<div class="main-content">
+    <div class="video-page">
+        {% for video in videos %}
+        <div class="video-block">
+            <div class="video-block-title">
+                <p>{{video.title}}</p>
+            </div>
+            <div class="video-block-youtube">
+                <iframe width="560" height="315" src="{{video.youtube}}" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-block-description">
+                <p>{{video.description}}</p>
+            </div>
+            <div class="video-block-link">
+                <a href="{{ video.link }}">Go to the next lessons</a>
+            </div>
         </div>
-        <div class="video-block-youtube">
-            <iframe width="560" height="315" src="{{video.youtube}}" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="video-block-description">
-            <p>{{video.description}}</p>
-        </div>
-        <div class="video-block-link">
-            <a href="{{ video.link }}">Go to the next lessons</a>
-        </div>
+    {% endfor %}
     </div>
 </div>
-{% endfor %}
-{% endblock content %}
+<!--{% load social_share %}
+
+{% post_to_facebook object_or_url "Post to Facebook!" %}
+{% post_to_twitter "New Song: {{object.title}}. Check it out!" object_or_url "Post to Twitter" %}
+{% post_to_gplus object_or_url "Post to Google+!" %}
+{% endblock content %}-->
