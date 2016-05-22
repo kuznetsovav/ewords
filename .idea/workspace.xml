@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88895faa-5a0f-48d2-99a4-143fedf8116f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ewords/static/css/style.css" afterPath="$PROJECT_DIR$/ewords/static/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ewords/templates/ewords/base.html" afterPath="$PROJECT_DIR$/ewords/templates/ewords/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ewords/templates/ewords/index.html" afterPath="$PROJECT_DIR$/ewords/templates/ewords/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ewords/templates/ewords/quotations.html" afterPath="$PROJECT_DIR$/ewords/templates/ewords/quotations.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ewords/templates/ewords/video.html" afterPath="$PROJECT_DIR$/ewords/templates/ewords/video.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/settings.py" afterPath="$PROJECT_DIR$/mysite/settings.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ewords/static/images/facebook-icon.svg" afterPath="" />
     </list>
     <ignored path="ewords.iws" />
     <ignored path=".idea/workspace.xml" />
