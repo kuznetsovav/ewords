@@ -26,13 +26,6 @@
                         <p class="quote-translation-p">{{quote.rus_text}}</p>
                         <div class="quote-author">{{quote.rus_author}}</div>
                     </div>
-                <div class="quote-sharing">
-                    {% load social_share %}
-                         {% post_to_facebook object_or_url "Facebook" %}
-                        {% post_to_twitter "New Song: {{object.title}}. Check it out!" object_or_url "Twitter" %}
-                        {% post_to_gplus object_or_url "Google+" %}
-
-                </div>
                 </div>
             {% endfor %}
             <div class="quote-comments">
