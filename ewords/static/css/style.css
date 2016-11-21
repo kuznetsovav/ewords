@@ -4,9 +4,18 @@
 }
 
 body {
+    width: 1366px;
+    margin: 0 auto;
     overflow-y: scroll;
 }
 
+.timer {
+    margin-top: 200px;
+}
+
+a {
+    text-decoration: none;
+}
 /**.facebook-this {
     float: left;
     width: 10px;
@@ -33,16 +42,22 @@ body {
 /**HEADER.LOGO**/
 
 .main-header {
-    width: 100%;
-    height: 100px;
+    width: 1366px;
+    height: 125px;
         background: #FFEFD5;
+
+}
+
+.main-header-elements {
+    width: 440px;
+    margin: 0 auto;
 }
 
 .main-header-logo {
     width: 150px;
     padding: 15px;
-    margin-left: 20px;
     float: left;
+    position: relative;
 }
 
 .main-header-logo a {
@@ -63,8 +78,15 @@ body {
 }
 
 /**HEADER.MENU**/
-.main-header-menu {
-    width: 300px;
+.main-header-menu-left {
+    width: 140px;
+    float: left;
+    position: relative;
+    margin-top: 36px;
+}
+
+.main-header-menu-right {
+    width: 120px;
     float: left;
     position: relative;
     margin-top: 36px;
@@ -86,6 +108,55 @@ body {
     border-bottom: 1px solid #363636;
     padding-bottom: 3px;
 }
+
+.main-header-login-button {
+    width: 100px;
+    height: 100px;
+    background: #FF7256;
+    color: white;
+    font-weight: bold;
+    float: right;
+    position: relative;
+}
+
+.main-header-login-button:hover {
+    background: red;
+    cursor: pointer;
+}
+
+.main-header-login-button p {
+    padding-top: 40px;
+    padding-left: 28px;
+}
+
+.main-header-signup-button {
+    width: 100px;
+    height: 100px;
+    background: #4876FF;
+    color: white;
+    font-weight: bold;
+    float: right;
+    position: relative;
+}
+
+.main-header-signup-button a {
+    color: white;
+}
+
+.main-header-login-button a {
+    color: white;
+}
+
+.main-header-signup-button p {
+    padding-top: 40px;
+    padding-left: 23px;
+}
+
+.main-header-signup-button:hover {
+    background: blue;
+    cursor: pointer;
+}
+
 
 /**MAIN PAGE**/
 
@@ -338,4 +409,10 @@ body {
 .video-block-description {
     font-family: 'Helvetica Neue', 'Helvetica', 'Verdana', 'Arial', sans-serif !important;
     padding-bottom: 10px;
+}
+
+/**Signup page**/
+#user_form {
+    width: 500px;
+    margin: 0 auto;
 }
