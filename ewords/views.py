@@ -11,6 +11,8 @@ from django.contrib.auth import authenticate, login
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
+from ewords.forms import QuoteForm
+from django.shortcuts import redirect
 
 
 def signup(request):
@@ -132,15 +134,29 @@ def index(request):
 
 
 def index(request):
-    quotes = Quote.objects.all().filter(day_quote=True)
+    quotes = Quote.objects.all().filter(incognito=False)
     return render(request, 'ewords/index.html', {'quotes': quotes})
 
 def quotations(request):
     return render(request, 'ewords/quotations.html', {})
 
 def quotations(request):
-    quotes = Quote.objects.all()
+    quotes = Quote.objects.all().filter(author=request.user)
     return render(request, 'ewords/quotations.html', {'quotes': quotes})
+
+
+def quotations_new(request):
+        if request.method == "POST":
+            form = QuoteForm(request.POST)
+            if form.is_valid():
+                post = form.save(commit=False)
+                post.author = request.user
+                post.published_date = timezone.now()
+                post.save()
+                return redirect('ewords.views.quotations')
+        else:
+            form = QuoteForm()
+        return render(request, 'ewords/quotations_new.html', {'form': form})
 
 def video(request):
     return render(request, 'ewords/video.html', {})
@@ -148,5 +164,7 @@ def video(request):
 def video(request):
     videos = Video.objects.all()
     return render(request, 'ewords/video.html', {'videos': videos})
+
+
 
 

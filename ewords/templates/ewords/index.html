@@ -3,9 +3,34 @@
 {% block content %}
 {% load staticfiles %}
 <div class="main-content">
-    <div class="timer">
-    <script src="http://megatimer.ru/s/30d9db9d266b01ecfc968f03e9953f17.js"></script>
+  <div class="quotations">
+    <div class="quotations-block">
+        {% for quote in quotes %}
+        <div class="quotations-quote">
+            <div class="quotations-quote-category">
+                <p>{{quote.category}}</p>
+            </div>
+            <div class="quotations-quote-eng-text">
+                <p>{{quote.eng_text}}</p>
+            </div>
+            <div class="quotations-quote-eng-author">
+                <p>{{quote.eng_author}}</p>
+            </div>
+            <p class="quote-translation-button">Translate into Russian</p>
+            <div class="quotations-quote-translate-block">
+                <div class="quotations-quote-rus-text">
+                    {{quote.rus_text}}
+                </div>
+                <div class="quotations-quote-rus-author">
+                    {{quote.rus_author}}
+                </div>
+            </div>
+
+            </div>
+        {% endfor %}
         </div>
+    </div>
+
 </div>
 
 {% endblock content %}

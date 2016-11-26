@@ -10,4 +10,5 @@ urlpatterns = [
     url(r'^signup/$', views.signup, name='signup'),
     url(r'^restricted/', views.restricted, name='restricted'),
     url(r'^logout/$', views.user_logout, name='logout'),
+    url(r'^idioms/new/$', views.quotations_new, name='quotations_new'),
 ]

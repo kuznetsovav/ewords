@@ -42,24 +42,28 @@
 <body>
     <div class="main-header">
         <div class="main-header-elements">
+            {% if user.is_authenticated %}
             <div class="main-header-menu-left">
                 <ul class="main-header-menu-list">
-                    <li><a href="../idioms">Idioms</a></li>
+                    <li><a href="{% url 'ewords.views.quotations' %}">Idioms</a></li>
                     <li><a href="../articles">Articles</a></li>
                 </ul>
             </div>
+            {% endif %}
             <div class="main-header-logo">
                 <a href="/">
                     <p class="main-header-logo-title">eWords</p>
                     <p class="main-header-logo-subtitle">Study Hard</p>
                 </a>
             </div>
+            {% if user.is_authenticated %}
             <div class="main-header-menu-right">
                 <ul class="main-header-menu-list">
                     <li><a href="../music">Music</a></li>
-                    <li><a href="../video">Video</a></li>
+                    <li><a href="{% url 'ewords.views.video' %}">Video</a></li>
                 </ul>
             </div>
+            {% endif %}
             </div>
 
         {% if user.is_authenticated %}

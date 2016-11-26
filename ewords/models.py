@@ -25,7 +25,7 @@ class Quote(models.Model):
     rus_text = models.TextField()
     rus_author = models.CharField(max_length=200)
     image_link = models.CharField(max_length=200)
-    day_quote = models.BooleanField()
+    incognito = models.BooleanField()
     created_date = models.DateField(default=timezone.now)
 
     def __str__(self):

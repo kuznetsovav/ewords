@@ -3,6 +3,11 @@
 {% block content %}
 {% load staticfiles %}
 <div class="quotations">
+    {% if user.is_authenticated %}
+    <a href="{% url 'ewords.views.quotations_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+    {% else %}
+    <p>test</p>
+    {% endif %}
     <div class="quotations-block">
         {% for quote in quotes %}
         <div class="quotations-quote">
