@@ -5,20 +5,23 @@
 <div class="main-content">
     {% for user in users %}
     <div class="profile_page">
-        <div class="profile_page_picture" style="border: 1px solid black; float: left; width: 100px; height: 200px; position: relative;">
+        <div class="profile_page_picture">
             <img src="../{{user.picture}}"/>
         </div>
-        <div class="profile_page_login" style="float: left; width: 1240px; height: 50px; position: relative; font-size: 20px;">
+        <div class="profile_page_login">
             {{user.user}}
         </div>
         <div class="profile_page_birthday">
+        <p>Birthday:</p>
             {{user.birthday}}
         </div>
         <div class="profile_page_extra_info">
-            <div class="profile_page_extra_info_hobby" style="margin-top: 20px;">
+            <div class="profile_page_extra_info_hobby">
+                <p>Hobbies:</p>
                 {{user.hobby}}
             </div>
-            <div class="profile_page_extra_info_education" style="margin-top: 20px;">
+            <div class="profile_page_extra_info_education">
+                <p>Education: </p>
                 {{user.education}}
             </div>
         </div>
