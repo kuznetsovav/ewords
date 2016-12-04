@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from .models import Quote
 from .models import Video
+from .models import UserProfile
+from .models import MapUserQuote
 from .models import User
 from django.forms import modelformset_factory
 from django.utils import timezone
@@ -13,6 +15,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 from ewords.forms import QuoteForm
 from django.shortcuts import redirect
+from ewords.forms import AddtomeForm
+
 
 
 def signup(request):
@@ -129,9 +133,15 @@ def user_logout(request):
     return HttpResponseRedirect('/')
 
 
+def profile(request):
+    return render(request, 'ewords/profile.html', {})
+
+def profile(request):
+    users = UserProfile.objects.all().filter(user=request.user)
+    return render(request, 'ewords/profile.html', {'users': users})
+
 def index(request):
     return render(request, 'ewords/index.html', {})
-
 
 def index(request):
     quotes = Quote.objects.all().filter(incognito=False)
@@ -143,7 +153,6 @@ def quotations(request):
 def quotations(request):
     quotes = Quote.objects.all().filter(author=request.user)
     return render(request, 'ewords/quotations.html', {'quotes': quotes})
-
 
 def quotations_new(request):
         if request.method == "POST":
@@ -157,6 +166,20 @@ def quotations_new(request):
         else:
             form = QuoteForm()
         return render(request, 'ewords/quotations_new.html', {'form': form})
+
+def quotations_addtome(request):
+        if request.method == "POST":
+            addtome_form = AddtomeForm(request.POST)
+            if addtome_form.is_valid():
+                post = addtome_form.save(commit=False)
+                post.user = request.user
+                post.quote = request.POST.get('quote_id')
+                addtome_form.save
+                return redirect('ewords.views.index')
+        else:
+            addtome_form = AddtomeForm()
+        return render(request, 'ewords/index.html', {'addtome_form': addtome_form})
+
 
 def video(request):
     return render(request, 'ewords/video.html', {})

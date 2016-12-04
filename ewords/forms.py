@@ -2,6 +2,7 @@ from django import forms
 from django.contrib.auth.models import User
 from ewords.models import UserProfile
 from ewords.models import Quote
+from ewords.models import MapUserQuote
 
 class UserForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput())
@@ -20,3 +21,9 @@ class QuoteForm(forms.ModelForm):
     class Meta:
         model=Quote
         fields = ('category','eng_text','eng_author','rus_text','rus_author','image_link','incognito')
+
+class AddtomeForm(forms.ModelForm):
+
+    class Meta:
+        model=MapUserQuote
+        fields=('user','quote')

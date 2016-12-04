@@ -4,9 +4,9 @@
 }
 
 body {
-    width: 1366px;
+    width: 100%;
     margin: 0 auto;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .timer {
@@ -15,6 +15,10 @@ body {
 
 a {
     text-decoration: none;
+}
+
+a:focus {
+        text-decoration: none;
 }
 /**.facebook-this {
     float: left;
@@ -42,25 +46,24 @@ a {
 /**HEADER.LOGO**/
 
 .main-header {
-    width: 1366px;
+    width: 100%;
     height: 125px;
         background: #FFEFD5;
 
 }
 
 .main-header-elements {
-    width: 440px;
-    margin: 0 auto;
+    margin-left: 37%;
 }
 
 .main-header-logo {
-    width: 150px;
+    width: 180px;
     padding: 15px;
     float: left;
     position: relative;
 }
 
-.main-header-logo a {
+.main-header-logo a:hover {
     text-decoration: none;
 }
 
@@ -75,6 +78,7 @@ a {
     margin-left: 30px;
     font-weight: bold;
     color: 	#363636;
+    margin-top: -10px;
 }
 
 /**HEADER.MENU**/
@@ -104,15 +108,16 @@ a {
     text-decoration: none;
 }
 
-.main-header-menu-list a:hover {
+/**.main-header-menu-list a:hover {
     border-bottom: 1px solid #363636;
     padding-bottom: 3px;
+}**/
+
+.login-form {
+    margin-left: 27%;
 }
 
 .main-header-login-button {
-    width: 100px;
-    height: 100px;
-    background: #FF7256;
     color: white;
     font-weight: bold;
     float: right;
@@ -120,23 +125,29 @@ a {
 }
 
 .main-header-login-button:hover {
-    background: red;
     cursor: pointer;
 }
 
 .main-header-login-button p {
-    padding-top: 40px;
-    padding-left: 28px;
+    margin: 0;
+}
+
+
+.register-form {
+    margin-top: 20px;
+}
+
+.register-form h3 {
+    margin-left: 27%;
+    margin-bottom: 20px;
 }
 
 .main-header-signup-button {
-    width: 100px;
-    height: 100px;
-    background: #4876FF;
     color: white;
     font-weight: bold;
     float: right;
     position: relative;
+
 }
 
 .main-header-signup-button a {
@@ -148,12 +159,10 @@ a {
 }
 
 .main-header-signup-button p {
-    padding-top: 40px;
-    padding-left: 23px;
+    margin: 0;
 }
 
 .main-header-signup-button:hover {
-    background: blue;
     cursor: pointer;
 }
 

@@ -7,6 +7,8 @@
         <p>Ewords says:<strong>thank you for registering!</strong></p>
         <a href="/">Return to the homepage.</a><br />
         {% else %}
+    <div class="register-form">
+        <h3>Please, fill all required fields.</h3>
         <form id="user_form" method="post" action="../signup/"
                 enctype="multipart/form-data">
 
@@ -17,8 +19,9 @@
             {{ profile_form.as_p }}
 
             <!-- Создаем кнопку для отправления данных формы. -->
-            <input type="submit" name="submit" value="Register" />
+            <input type="submit" name="submit" value="Register" class="btn btn-success" />
         </form>
         {% endif %}
 </div>
+    </div>
 {% endblock content %}

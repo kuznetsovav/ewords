@@ -10,7 +10,7 @@ class UserProfile(models.Model):
     birthday=models.DateField(default=timezone.now)
     hobby=models.TextField(blank=True)
     education=models.TextField(blank=True)
-    picture = models.ImageField(upload_to='profile_images', blank=True)
+    picture = models.ImageField(upload_to='ewords/static/images', blank=True)
     created_date=models.DateField(default=timezone.now)
 
     def __str__(self):
@@ -30,6 +30,13 @@ class Quote(models.Model):
 
     def __str__(self):
         return self.eng_author
+
+class MapUserQuote(models.Model):
+    user=models.CharField(max_length=200)
+    quote=models.CharField(max_length=200)
+
+    def __str__(self):
+        return str(self.user)
 
 
 class Video(models.Model):

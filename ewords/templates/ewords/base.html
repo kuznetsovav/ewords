@@ -67,8 +67,8 @@
             </div>
 
         {% if user.is_authenticated %}
-<a href="/logout">Logout</a><br />
-        <a href="/restricted">Restricted Page</a><br />
+        <a href="/profile">{{user}}</a><br />
+        <a href="/logout">Logout</a><br />
         {% else %}
         <div class="main-header-login-button">
             <a href="../login" class="btn btn-primary"><p>Log In</p></a>

@@ -16,6 +16,9 @@
             <div class="quotations-quote-eng-author">
                 <p>{{quote.eng_author}}</p>
             </div>
+            <a href="/profile" class="quotations-quote-added-by">
+            Added by {{quote.author}}
+        </a>
             <p class="quote-translation-button">Translate into Russian</p>
             <div class="quotations-quote-translate-block">
                 <div class="quotations-quote-rus-text">
@@ -25,6 +28,14 @@
                     {{quote.rus_author}}
                 </div>
             </div>
+                {% if user.is_authenticated %}
+            <form method="POST" class="post-form">{% csrf_token %}
+            {{ addtome_form.as_p }}
+            <button type="submit" class="save btn btn-default" name="quote_id" value="{{quote.id}}">Save</button>
+        </form>
+            {% else %}
+    <p>test</p>
+    {% endif %}
 
             </div>
         {% endfor %}

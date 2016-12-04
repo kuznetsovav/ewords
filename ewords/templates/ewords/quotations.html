@@ -10,7 +10,7 @@
     {% endif %}
     <div class="quotations-block">
         {% for quote in quotes %}
-        <div class="quotations-quote">
+        <div class="quotations-quote" id="{{quote.id}}">
             <div class="quotations-quote-category">
                 <p>{{quote.category}}</p>
             </div>
@@ -20,6 +20,9 @@
             <div class="quotations-quote-eng-author">
                 <p>{{quote.eng_author}}</p>
             </div>
+            <p class="quotations-quote-added-by">
+            {{quote.author}}
+        </p>
             <p class="quote-translation-button">Translate into Russian</p>
             <div class="quotations-quote-translate-block">
                 <div class="quotations-quote-rus-text">
@@ -29,7 +32,6 @@
                     {{quote.rus_author}}
                 </div>
             </div>
-
             </div>
         {% endfor %}
         </div>
