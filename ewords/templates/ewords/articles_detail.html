@@ -1,0 +1,22 @@
+    {% extends 'ewords/base.html' %}
+
+    {% block content %}
+    <div class="main-content">
+        <div class="article-page">
+              <div class="article-block">
+            <div class="article-page-article-title">
+                <h1>{{ article.title }}</h1>
+            </div>
+            <div class="article-page-aritcle-short-description">
+                {{article.description|safe}}
+            </div>
+            <div class="article-page-article-link">
+                <a href="{{article.link}}">Original Text or a Proof Link</a>
+            </div>
+            <div class="article-page-article-tags">
+                <span class="article-page-article-tag">{{ article.tag }}</span>
+            </div>
+        </div>
+        </div>
+        </div>
+    {% endblock %}

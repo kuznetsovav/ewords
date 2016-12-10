@@ -4,22 +4,35 @@
 {% load staticfiles %}
 <div class="main-content">
     <div class="video-page">
+     {% if user.is_authenticated %}
+    <a href="{% url 'ewords.views.video_new' %}" class="add-new-video-button"><span class="glyphicon glyphicon-plus"></span> Add a new video</a>
+    {% else %}
+    <p></p>
+    {% endif %}
+    <div class="video-page-list">
         {% for video in videos %}
-        <div class="video-block">
-            <div class="video-block-title">
+        <div class="video-page-block">
+            <div class="video-page-block-title">
                 <p>{{video.title}}</p>
             </div>
-            <div class="video-block-youtube">
+            <div class="video-page-block-youtube">
                 <iframe width="560" height="315" src="{{video.youtube}}" frameborder="0" allowfullscreen></iframe>
             </div>
-            <div class="video-block-description">
+            <div class="video-page-block-description">
                 <p>{{video.description}}</p>
             </div>
-            <div class="video-block-link">
+            <div class="video-page-block-tags">
+                <span class="video-page-block-tag">{{ video.tag }}</span>
+            </div>
+            <div class="video-page-block-link">
                 <a href="{{ video.link }}">Go to the next lessons</a>
             </div>
         </div>
     {% endfor %}
     </div>
+        <div class="audio-page-tag-cloud">
+             <img src="/static/images/tag-cloud.png"/>
+    </div>
 </div>
+    </div>
 {% endblock content %}

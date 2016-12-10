@@ -2,8 +2,10 @@ from django.shortcuts import render
 from .models import Quote
 from .models import Video
 from .models import UserProfile
+from .models import Article
 from .models import MapUserQuote
 from .models import User
+from .models import Audio
 from django.forms import modelformset_factory
 from django.utils import timezone
 import datetime
@@ -16,6 +18,10 @@ from django.contrib.auth import logout
 from ewords.forms import QuoteForm
 from django.shortcuts import redirect
 from ewords.forms import AddtomeForm
+from ewords.forms import VideoForm
+from ewords.forms import ArticleForm
+from ewords.forms import AudioForm
+from django.shortcuts import render, get_object_or_404
 
 
 
@@ -187,6 +193,67 @@ def video(request):
 def video(request):
     videos = Video.objects.all()
     return render(request, 'ewords/video.html', {'videos': videos})
+
+def video_new(request):
+    if request.method == "POST":
+        form = VideoForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.published_date = timezone.now()
+            post.save()
+            return redirect('ewords.views.video')
+    else:
+        form = VideoForm()
+    return render(request, 'ewords/video_new.html', {'form': form})
+
+def articles(request):
+    return render(request, 'ewords/articles.html', {})
+
+def articles(request):
+    articles = Article.objects.all()
+    return render(request, 'ewords/articles.html', {'articles': articles})
+
+def articles_new(request):
+    if request.method == "POST":
+        form = ArticleForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.published_date = timezone.now()
+            post.save()
+            return redirect('ewords.views.articles')
+    else:
+        form = ArticleForm()
+    return render(request, 'ewords/articles_new.html', {'form': form})
+
+def articles_detail(request, pk):
+        article = get_object_or_404(Article, pk=pk)
+        return render(request, 'ewords/articles_detail.html', {'article': article})
+
+def audio(request):
+    return render(request, 'ewords/audio.html', {})
+
+def audio(request):
+    audio = Audio.objects.all()
+    return render(request, 'ewords/audio.html', {'audio': audio})
+
+def audio_new(request):
+    if request.method == "POST":
+        form = AudioForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.published_date = timezone.now()
+            post.save()
+            return redirect('ewords.views.audio')
+    else:
+        form = AudioForm()
+    return render(request, 'ewords/audio_new.html', {'form': form})
+
+def audio_detail(request, pk):
+        audio = get_object_or_404(Audio, pk=pk)
+        return render(request, 'ewords/audio_detail.html', {'audio': audio})
 
 
 

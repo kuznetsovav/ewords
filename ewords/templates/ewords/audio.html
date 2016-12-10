@@ -1,10 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'ewords/base.html' %}
 
-</body>
-</html>
+{% block content %}
+{% load staticfiles %}
+<div class="main-content">
+    <div class="audio-page">
+         {% if user.is_authenticated %}
+    <a href="{% url 'ewords.views.audio_new' %}" class="add-new-audio-button"><span class="glyphicon glyphicon-plus"></span> Add a new audio</a>
+    {% else %}
+    <p></p>
+    {% endif %}
+        <div class="audio-page-list">
+        {% for audio in audio %}
+
+            <div class="audio-page-track">
+                <div class="audio-page-track-title">{{audio.title}}</div>
+            <div class="audio-page-track-player">
+                <audio controls>
+  <source src="../../{{audio.file}}" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+            </div>
+             <div class="audio-page-track-tags">
+                <span class="audio-page-track-tag">{{ audio.tag }}</span>
+            </div>
+            <a href="{% url 'audio_detail' pk=audio.pk %}">Go to lyrics..</a>
+        </div>
+            </div>
+    {% endfor %}
+    <div class="audio-page-tag-cloud">
+             <img src="/static/images/tag-cloud.png"/>
+    </div>
+    </div>
+</div>
+{% endblock content %}

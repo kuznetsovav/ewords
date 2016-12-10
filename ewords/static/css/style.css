@@ -4,8 +4,6 @@
 }
 
 body {
-    width: 100%;
-    margin: 0 auto;
     overflow-y: auto;
     overflow-x:hidden;
 }
@@ -51,6 +49,7 @@ a:focus {
     height: 125px;
         background: #FFEFD5;
     overflow-x:hidden;
+    margin: 0 auto;
 
 }
 
@@ -122,6 +121,10 @@ a:focus {
 
 }
 
+.main-content {
+    width: 1600px;
+    margin: 0 auto;
+}
 /**.main-header-menu-list a:hover {
     border-bottom: 1px solid #363636;
     padding-bottom: 3px;
@@ -276,12 +279,12 @@ a:focus {
 
 /**Quotations page**/
 .quotations {
-    width: 98%;
+    width: 1600px;
     padding-top: 10px;
     margin: 0 auto;
 }
 
-.add-new-idiom-button {
+.add-new-idiom-button, .add-new-article-button, .add-new-audio-button, .add-new-video-button {
     float: left;
     position: relative;
     width: 100%;
@@ -289,17 +292,18 @@ a:focus {
 }
 
 .quotations-block {
-    width: 90%;
+    width: 1250px;
     float: left;
     position: relative;
+    padding: 10px;
 }
 
 .quotations-sorting {
     margin-top: 5px;
     float: left;
     position: relative;
-    margin-left: -13%;
-    width: 20%;
+    margin-left: 0;
+    width: 320px;
 
 }
 
@@ -372,7 +376,7 @@ a:focus {
 
 .quotations-quote{
     width: 280px;
-    margin: 5px;
+    margin: 12px;
     -webkit-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.1);
     border: 1px solid #c4c4c4;
     float: left;
@@ -443,29 +447,522 @@ a:focus {
 /**Video page**/
 
 .video-page {
-    width: 1200px;
-    background: #DBDCDE;
-    margin: 0 auto;
+    width: 1600px;
+    padding-top: 10px;
 }
 
-.video-block {
-    width: 560px;
+.video-page-list {
+    width: 1250px;
+    float: left; 
+}
+
+.video-page-block {
+    width: 580px;
     height: 450px;
     float: left;
     position: relative;
     padding: 20px;
 }
 
-.video-block-title {
+.video-page-block-title {
     font-family: 'Helvetica Neue', 'Helvetica', 'Verdana', 'Arial', sans-serif !important;
     font-size: 20px;
     padding-bottom: 10px;
     font-weight: bold;
 }
 
-.video-block-description {
+.video-page-block-description {
     font-family: 'Helvetica Neue', 'Helvetica', 'Verdana', 'Arial', sans-serif !important;
     padding-bottom: 10px;
+}
+
+.video-page-block-tags {
+    margin-bottom: 10px;
+}
+/**Signup page**/
+#user_form {
+    width: 500px;
+    margin: 0 auto;
+}
+
+/**Profile page**/
+.profile_page {
+    width: 700px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.profile_page_login {
+    height: 50px;
+    font-size: 20px;
+}
+
+.profile_page_picture {
+    border: 1px solid black;
+    float: left;
+    width: 200px;
+    height: 600px;
+    position: relative;
+    margin-right: 20px;
+}
+
+.profile_page_birthday {
+    margin-bottom: 20px;
+}
+
+.profile_page_extra_info_hobby {
+    margin-bottom: 20px;
+}
+
+.profile_page p {
+    font-weight: bold;
+}
+
+
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+    overflow-y: auto;
+    overflow-x:hidden;
+}
+
+.timer {
+    margin-top: 200px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:focus {
+        text-decoration: none;
+}
+/**.facebook-this {
+    float: left;
+    width: 10px;
+    margin-left: 10px;
+}
+
+.tweet-this {
+    float: left;
+    width: 10px;
+    margin-left: 100px;
+}
+
+.gplus-this {
+    float: left;
+    width: 10px;
+    margin-left: 85px;
+    margin-bottom: 10px;
+}**/
+
+
+
+
+/**HEADER**/
+/**HEADER.LOGO**/
+
+.main-header {
+    width: 1600px;
+    height: 125px;
+        background: #FFEFD5;
+    overflow-x:hidden;
+    margin: 0 auto;
+
+}
+
+.main-header-menu {
+    width: 440px;
+    margin: 0 auto;
+}
+
+.main-header-elements {
+
+}
+
+.main-header-logo {
+    width: 180px;
+    padding: 15px;
+    float: left;
+    position: relative;
+}
+
+.main-header-logo a:hover {
+    text-decoration: none;
+}
+
+.main-header-logo-title {
+    font-size: 40px;
+    font-weight: bold;
+    color: 	#363636;
+}
+
+.main-header-logo-subtitle {
+    font-size: 13px;
+    margin-left: 30px;
+    font-weight: bold;
+    color: 	#363636;
+    margin-top: -10px;
+}
+
+/**HEADER.MENU**/
+.main-header-menu-left {
+    width: 140px;
+    float: left;
+    position: relative;
+    margin-top: 36px;
+}
+
+.main-header-menu-right {
+    width: 120px;
+    float: left;
+    position: relative;
+    margin-top: 36px;
+}
+
+.main-header-menu-list li {
+    display: inline;
+    font-size: 20px;
+    font-family: 'calibri';
+    margin-right: 10px;
+}
+
+.main-header-menu-list a {
+    color: #363636;
+    text-decoration: none;
+}
+
+.main-header-menu-login {
+    float: right;
+    margin-right: 235px;
+    margin-top: 30px;
+
+}
+
+.main-content {
+    width: 1600px;
+    margin: 0 auto;
+}
+/**.main-header-menu-list a:hover {
+    border-bottom: 1px solid #363636;
+    padding-bottom: 3px;
+}**/
+
+.login-form {
+    margin-left: 27%;
+}
+
+.main-header-menu-profile {
+    float: left;
+    position: relative;
+    margin-right: 15px;
+    margin-top: 7px;
+}
+
+.main-header-menu-logout {
+    float: left;
+}
+
+.main-header-login-button {
+    color: white;
+    font-weight: bold;
+    float: left;
+    position: relative;
+    margin-right: 10px;
+}
+
+.main-header-login-button:hover {
+    cursor: pointer;
+}
+
+.main-header-login-button p {
+    margin: 0;
+}
+
+
+.register-form {
+    margin-top: 20px;
+}
+
+.register-form h3 {
+    margin-left: 27%;
+    margin-bottom: 20px;
+}
+
+.main-header-signup-button {
+    color: white;
+    font-weight: bold;
+    float: left;
+    position: relative;
+
+}
+
+.main-header-signup-button a {
+    color: white;
+}
+
+.main-header-login-button a {
+    color: white;
+}
+
+.main-header-signup-button p {
+    margin: 0;
+}
+
+.main-header-signup-button:hover {
+    cursor: pointer;
+}
+
+
+/**MAIN PAGE**/
+
+/**MAIN PAGE.QUOTES**/
+.quotes-block {
+    width: 100%;
+    font-family: 'calibri';
+}
+
+.quotes-block-headline {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.quotes-block-headline,.quote {
+    width: 500px;
+    margin: auto;
+    padding-top: 25px;
+}
+
+.quote-image {
+    width: 200px;
+    float: left;
+    position: relative;
+}
+
+.quote-image img {
+    width: 95%;
+}
+
+.quote-text-information {
+    width: 295px;
+    float: left;
+    position: relative;
+    padding-left: 5px;
+}
+
+.quote-text {
+    width:
+    text-align: center;
+    font-family: 'Helvetica Neue', 'Helvetica', 'Verdana', 'Arial', sans-serif !important;
+    font-size: 20px;
+    line-height: 26px;
+    float: left;
+}
+
+.quote-author {
+    text-align: right;
+    padding-top: 10px;
+    font-style: italic;
+}
+
+.quote-translation {
+    padding-top: 10px;
+    display: none;
+    float: left;
+    padding-bottom: 20px;
+}
+
+.quote-translation p {
+    font-family: 'Helvetica Neue', 'Helvetica', 'Verdana', 'Arial', sans-serif !important;
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.quote-translation-button {
+    color: blue;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+
+.quote-sharing {
+    width: 100;
+    text-align: right;
+    padding-top: 10px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+}
+
+/**Quotations page**/
+.quotations {
+    width: 1600px;
+    padding-top: 10px;
+    margin: 0 auto;
+}
+
+.add-new-idiom-button {
+    float: left;
+    position: relative;
+    width: 100%;
+    padding: 5px;
+}
+
+.quotations-block {
+    width: 1250px;
+    float: left;
+    position: relative;
+    padding: 10px;
+}
+
+.quotations-sorting {
+    margin-top: 5px;
+    float: left;
+    position: relative;
+    margin-left: 0;
+    width: 320px;
+
+}
+
+.quotations-sorting-topics-headline {
+    font-size: 20px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #AAAAAA;
+}
+
+.quotations-sorting-authors-headline {
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.quotations-sorting-topics-item {
+    padding-top: 5px;
+}
+
+.quotations-sorting-topics-item li {
+    display: block;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+    border: 1px solid #c4c4c4;
+    background: #fff;
+    border-radius: 3px;
+    padding: 0 5px;
+    margin: 5px auto;
+    text-align: left;
+    padding-left: 14px;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    line-height: 40px;
+    transition: .3s;
+    overflow: hidden;
+}
+
+.quotations-sorting-authors-headline {
+    font-size: 20px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #AAAAAA;
+    padding-top: 10px;
+}
+
+.quotations-sorting-authors-items {
+    padding-top: 5px;
+}
+
+.quotations-sorting-authors-items li {
+    display: block;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+    border: 1px solid #c4c4c4;
+    background: #fff;
+    border-radius: 3px;
+    padding: 0 5px;
+    margin: 5px auto;
+    text-align: left;
+    padding-left: 14px;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    line-height: 40px;
+    transition: .3s;
+    overflow: hidden;
+}
+
+.quotations-quote{
+    width: 280px;
+    margin: 12px;
+    -webkit-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.1);
+    border: 1px solid #c4c4c4;
+    float: left;
+    position: relative;
+}
+
+.quotations-quote-category {
+    background: black;
+    color: white;
+    font-family: 'Helvetica Neue', 'Helvetica', 'Verdana', 'Arial', sans-serif !important;
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 1px;
+}
+
+.quotations-quote-eng-text {
+    font-family: 'Helvetica Neue', 'Helvetica', 'Verdana', 'Arial', sans-serif !important;
+    font-size: 20px;
+    line-height: 26px;
+     padding: 10px;
+}
+
+.quotations-quote-eng-author {
+    text-align: right;
+    padding-top: 5px;
+    font-style: italic;
+     padding-right: 10px;
+}
+
+.quotations-quote-translate-block {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: none;
+    padding-left: 10px;
+}
+
+.quotations-quote-rus-text {
+    font-family: 'Helvetica Neue', 'Helvetica', 'Verdana', 'Arial', sans-serif !important;
+    font-size: 20px;
+    line-height: 26px;
+     padding-right: 10px;
+}
+
+.quotations-quote-rus-author {
+    text-align: right;
+    padding-top: 5px;
+    font-style: italic;
+     padding: 10px;
+}
+
+.quotations-quote-added-by {
+    margin-left: 10px;
+}
+
+.quotations-quote-add-to-me {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+/**New Idiom**/
+.quotations-add-new-form {
+    width: 370px;
+    margin: 0 auto;
 }
 
 /**Signup page**/
@@ -505,4 +1002,122 @@ a:focus {
 
 .profile_page p {
     font-weight: bold;
+}
+
+
+/**Articles page**/
+
+.article-page {
+    padding-top: 10px;
+}
+
+.article-page-list {
+    width: 1250px;
+    float: left;
+    position: relative;
+}
+
+.article-page-article{
+    padding: 0px 20px;
+}
+
+.article-page-aritcle-short-description {
+    margin-bottom: 10px;
+}
+
+.article-page-article-link {
+    margin-bottom: 10px;
+}
+
+.article-page-article-tags {
+    width: 1250px;
+}
+
+.article-page-article-tag, .audio-page-track-tag, .video-page-block-tag {
+    background: #ADD8E6;
+    padding: 5px;
+    border-radius:5px;
+}
+
+
+.article-page-tag-cloud, .audio-page-tag-cloud {
+    width: 300px;
+    float: left;
+    position: relative;
+}
+
+.article-page-tag-cloud img, .audio-page-tag-cloud img {
+    width: 300px;
+}
+
+
+/**Audio page**/
+
+.audio-page {
+    padding-top: 10px;
+}
+
+.audio-page-list {
+    width: 1250px;
+    float: left;
+    position: relative;
+}
+
+.audio-page-track{
+    padding: 15px 20px;
+    width: 350px;
+    margin: 12px;
+    -webkit-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.1);
+    border: 1px solid #c4c4c4;
+    float: left;
+    position: relative;
+}
+
+.audio-page-track-title {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.audio-page-track-player {
+    margin-bottom: 10px;
+}
+
+.audio-page-track-tags {
+    margin-bottom: 10px;
+}
+
+.audio-detail-page {
+    width: 1600px;
+    padding-top: 10px;
+}
+
+.audio-detail-page-track {
+    width: 1200px;
+    float: left;
+    padding: 20px;
+}
+
+.audio-detail-page-title {
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.audio-detail-page-player audio {
+    width: 1140px;
+}
+
+.audio-detail-page-lyrics-eng {
+    width: 570px;
+    float: left;
+    position: relative;
+}
+
+.audio-detail-page-lyrics-rus {
+    width: 570px;
+    float: left;
+    position: relative;
+}
+
+.audio-detail-page-link {
+    padding-bottom: 10px;
 }

@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'ewords/base.html' %}
 
-</body>
-</html>
+{% block content %}
+{% load staticfiles %}
+<div class="article-add-new-form">
+<h3>Fill all required fields</h3>
+        <form method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-success">Save</button>
+        </form>
+    </div>
+{% endblock content %}

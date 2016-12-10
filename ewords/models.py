@@ -4,6 +4,8 @@ from datetime import datetime, timedelta, time
 from django.db import models
 from django.forms import ModelForm
 from django.contrib.auth.models import User
+from django.db import models
+from tinymce.models import HTMLField
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User)
@@ -45,10 +47,42 @@ class Video(models.Model):
     description = models.TextField()
     link = models.TextField()
     youtube = models.CharField(max_length=200)
+    tag = models.CharField(max_length=200)
+    incognito = models.BooleanField()
     created_date = models.DateField(default=timezone.now)
 
     def __str__(self):
         return self.title
+
+
+class Article(models.Model):
+    author = models.ForeignKey('auth.User')
+    title = models.CharField(max_length=200)
+    short_description = HTMLField(max_length=500)
+    description = HTMLField()
+    link = models.CharField(max_length=200)
+    tag = models.CharField(max_length=200)
+    incognito = models.BooleanField()
+    created_date = models.DateField(default=timezone.now)
+
+    def __str__(self):
+        return self.title
+
+
+class Audio(models.Model):
+    author = models.ForeignKey('auth.User')
+    title = models.CharField(max_length=200)
+    file = models.FileField(upload_to='ewords/ewords/static/audio')
+    lyrics_eng = HTMLField()
+    lyrics_rus = HTMLField()
+    link = models.CharField(max_length=200)
+    tag = models.CharField(max_length=200)
+    incognito = models.BooleanField()
+    created_date = models.DateField(default=timezone.now)
+
+    def __str__(self):
+        return self.title
+
 
 
 

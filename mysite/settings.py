@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ewords',
+    'tinymce',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -124,4 +125,11 @@ STATIC_URL = '/static/'
 LOGIN_URL = '/login'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+TINYMCE_DEFAULT_CONFIG = {
+	'plugins': 'paste',
+	'paste_remove_styles': 'true',
+	'paste_remove_styles_if_webkit': 'true',
+	'paste_strip_class_attributes': 'all',
+}
 

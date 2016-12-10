@@ -58,7 +58,7 @@
             <div class="main-header-menu-left">
                 <ul class="main-header-menu-list">
                     <li><a href="{% url 'ewords.views.quotations' %}">Idioms</a></li>
-                    <li><a href="/">Articles</a></li>
+                    <li><a href="{% url 'ewords.views.articles' %}">Articles</a></li>
                 </ul>
             </div>
             {% endif %}
@@ -71,7 +71,7 @@
             {% if user.is_authenticated %}
             <div class="main-header-menu-right">
                 <ul class="main-header-menu-list">
-                    <li><a href="/">Music</a></li>
+                    <li><a href="{% url 'ewords.views.audio' %}">Music</a></li>
                     <li><a href="{% url 'ewords.views.video' %}">Video</a></li>
                 </ul>
             </div>

@@ -3,6 +3,10 @@ from django.contrib.auth.models import User
 from ewords.models import UserProfile
 from ewords.models import Quote
 from ewords.models import MapUserQuote
+from ewords.models import Video
+from ewords.models import Article
+from ewords.models import Audio
+
 
 class UserForm(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput())
@@ -27,3 +31,25 @@ class AddtomeForm(forms.ModelForm):
     class Meta:
         model=MapUserQuote
         fields=('user','quote')
+
+
+class VideoForm(forms.ModelForm):
+
+    class Meta:
+        model=Video
+        fields = ('title','description','link','youtube','incognito')
+
+class ArticleForm(forms.ModelForm):
+
+    class Meta:
+        model=Article
+        fields = ('title','short_description','description','link','tag','incognito')
+
+
+class AudioForm(forms.ModelForm):
+
+    class Meta:
+        model=Audio
+        fields = ('title','file','lyrics_eng', 'lyrics_rus','link','tag','incognito')
+
+

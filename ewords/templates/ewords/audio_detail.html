@@ -1,0 +1,34 @@
+    {% extends 'ewords/base.html' %}
+
+    {% block content %}
+    <div class="main-content">
+        <div class="audio-detail-page">
+            <div class="audio-detail-page-track">
+            <div class="audio-detail-page-title">
+                <p>{{audio.title}}</p>
+            </div>
+            <div class="audio-detail-page-player">
+                <audio controls>
+  <source src="../../{{audio.file}}" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+            </div>
+            <div class="audio-detail-page-lyrics-eng">
+                <p>{{audio.lyrics_eng|safe}}</p>
+            </div>
+             <div class="audio-detail-page-lyrics-rus">
+                <p>{{audio.lyrics_rus|safe}}</p>
+            </div>
+            <div class="audio-detail-page-link">
+                <a href="{{ audio.link }}">Proof Link</a>
+            </div>
+             <div class="audio-detail-page-tags">
+                 <span class="audio-page-track-tag">{{ audio.tag }}</span>
+            </div>
+        </div>
+     <div class="audio-page-tag-cloud">
+             <img src="/static/images/tag-cloud.png"/>
+    </div>
+        </div>
+        </div>
+    {% endblock %}
